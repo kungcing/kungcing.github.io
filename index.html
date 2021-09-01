@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+        content="Let's explore my experiences Android dev, Web-Mapping with Leaflet and OpenLayers, Geoserver, 3D web-based point cloud, Web Dev, Desktop Dev...">
+    <meta name="author" content="ADINANT DOLO">
+    <link rel="icon" href="assets/images/favicon.png" type="image/png" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+
+    <title>Let's explore my experiences--ADINANT DOLO</title>
+    <!--OpenLayers's CSS and js-->
+    <link rel="stylesheet" href="assets/css/ol.css" type="text/css">
+    <script src="assets/js/ol.js"></script>
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/main_style.css">
+    <!--Leaflet's CSS and js-->
+    <link rel="stylesheet" href="assets/css/leaflet.css" />
+    <script src="assets/js/leaflet.js"></script>
+    <style>
+        #mapid {
+            height: 600px;
+        }
+
+        .map {
+            height: 600px;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="#" class="logo">
+                            <img src="assets/images/new_logo.png" alt="Kungcing" />
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="#welcome" class="active">Home</a></li>
+                            <li><a href="#features">Showcases</a></li>
+                            <li><a href="#programmingSkills">Programming Skills</a></li>
+                            <!--<li><a href="#testimonials">Testimonials</a></li>-->
+                            <!--<li><a href="#pricing-plans">Pricing Tables</a></li>-->
+                            <li><a href="#blog">Other experiences</a></li>
+                            <li><a href="#contact-us">Contact Us</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Welcome Area Start ***** -->
+    <div class="welcome-area" id="welcome">
+
+        <!-- ***** Header Text Start ***** -->
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h1>Welcome to <strong>my playground</strong><br>Let's explore <strong>my experiences</strong>
+                        </h1>
+                        <p>Hi everyone, my name is <strong>ADINANT</strong> and this is my webpage on Github.
+                            I made it to present my IT experience's. I love Android, mapping and surveys. It's my
+                            life!!!</p>
+                        <a href="#features" class="main-button-slider">Discover More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Header Text End ***** -->
+    </div>
+    <!-- ***** Welcome Area End ***** -->
+
+    <!-- ***** Features Small Start ***** -->
+    <section class="section home-feature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12"
+                            data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
+                            <a href="#AndroidAppDev">
+                                <div class="features-small-item">
+                                    <div class="icon">
+                                        <i><img src="assets/images/android.png" alt=""></i>
+                                    </div>
+                                    <h5 class="features-title">Android Application Development</h5>
+                                    <p>With the Android System, I developed the solution tools for supporting field
+                                        survey teams.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- ***** Features Small Item End ***** -->
+
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12"
+                            data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+                            <a href="#webmap">
+                                <div class="features-small-item">
+                                    <div class="icon">
+                                        <i><img src="assets/images/map.png" alt=""></i>
+                                    </div>
+                                    <h5 class="features-title">Web Mapping</h5>
+                                    <p>With Leaflet, Openleyers, and GeoServer,
+                                        I can build both 2D and 3D web-mapping to support GIS and Remote Sensing.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- ***** Features Small Item End ***** -->
+
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12"
+                            data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
+                            <a href="#webdev">
+                                <div class="features-small-item">
+                                    <div class="icon">
+                                        <i><img src="assets/images/web.png" alt=""></i>
+                                    </div>
+                                    <h5 class="features-title">Web Development</h5>
+                                    <p>development of web services and web applications, both front-end and back-end
+                                        It's interesting to me.</p>
+                                    <p>...</p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- ***** Features Small Item End ***** -->
+
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12"
+                            data-scroll-reveal="enter bottom move 50px over 0.6s after 0.8s">
+                            <a href="#desktopdev">
+                                <div class="features-small-item">
+                                    <div class="icon">
+                                        <i><img src="assets/images/desktop.png" alt=""></i>
+                                    </div>
+                                    <h5 class="features-title">Desktop Application Development</h5>
+                                    <p>Development of desktop applications to support cross-platform data transfer
+                                        between PCs and mobiles</p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- ***** Features Small Item End ***** -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Small End ***** -->
+
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section padding-top-70 padding-bottom-0" id="features">
+        <div class="container">
+            <!-- ***** Section Title Start ***** -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hr"></div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="center-heading">
+                        <h2 class="section-title" id="AndroidAppDev">Android Application Development</h2>
+                    </div>
+                </div>
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="center-text">
+                        <p>Android is a powerful and popular OS system for mobile devices. It is easy to use and highly
+                            efficient.
+                            There are a ton of free libraries and development toolskits. Also, Android Studio, the great
+                            IDE. It can be applied to my project the following</p>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+
+            </div>
+            <!-- ***** Section Title End ***** -->
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12 align-self-center"
+                    data-scroll-reveal="enter left move 50px over 0.6s after 0.4s">
+                    <div id="carouselPhoneApp" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselPhoneApp" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselPhoneApp" data-slide-to="1"></li>
+                            <li data-target="#carouselPhoneApp" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="assets/images/mobile/m1.png" alt="Main Activity">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="assets/images/mobile/m2.png" alt="Set Data Activity">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="assets/images/mobile/m3.png" alt="Take Photo Activity">
+                            </div>
+                            <img src="assets/images/mobile/m.png" class="d-block w-100" alt="Phone App">
+                        </div>
+
+                        <a class="carousel-control-prev" href="#carouselPhoneApp" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="carousel-control-next" href="#carouselPhoneApp" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-8 col-md-12 col-sm-12 align-self-center mobile-top-fix">
+                    <div class="left-heading ">
+                        <h2 class="section-title" id="sen-app">Sensitive Area Survey APP</h2>
+                    </div>
+                    <div class="left-text">
+                        <p>An Android application designed to support sensitive environmental area survey work.
+                            In the S1 Conssession Oil field project area, covering 4 provinces in northern Thailand,
+                            simple operations by taking pictures and collecting information about their basic
+                            characteristics,
+                            such as building type, water, location, etc., are effective. reduce the number of surveyor
+                        </p>
+                        <p>The app is developed by Android Studio. Details are as follows.</p>
+
+
+                    </div>
+                    <ul class="list-unstyled">
+                        <li>Main libraries</li>
+                        <li><i class="fa fa-book" style="color: orange;"></i> - CameraX, Android Jetpack Support Lib
+                        </li>
+                        <li><i class="fa fa-book" style="color: orange;"></i> - Picasso Lib</li>
+                        <li><i class="fa fa-book" style="color: orange;"></i> - FusedLocationProviderClient</li>
+                    </ul>
+                    <br>
+                    <ul class="list-unstyled">
+                        <li>App Features</li>
+                        <li><i class="fa fa-check" style="color: orange;"></i> - support for Android version 5.0
+                            (lolipop) and up</li>
+                        <li><i class="fa fa-check" style="color: orange;"></i> - Take photos and save data in one touch
+                        </li>
+                        <li><i class="fa fa-check" style="color: orange;"></i> - Save raw data in *.csv file format for
+                            ease of use</li>
+                        <li><i class="fa fa-check" style="color: orange;"></i> - Auto save lattitude and lontitude
+                            coordinates system to *.csv file format</li>
+                        <li><i class="fa fa-check" style="color: orange;"></i> - Wireless data transfer via <a
+                                href="#sadd-app">SAAD app</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="hr"></div>
+                </div>
+            </div>
+
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section padding-top-70 padding-bottom-0">
+        <div class="container">
+            <!-- ***** Section Title Start ***** -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <br>
+                    <br>
+                    <div class="center-heading">
+                        <h2 class="section-title" id="webmap">Web mapping Development</h2>
+                    </div>
+                </div>
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="center-text">
+                        <p>3D web-based point The cloud is a new generation of web mapping.
+                            In 2D mapping, there are two js libraries for beautiful mapping tools,
+                            Openlayers and Leaflet, and both can be used with Geoserver,
+                            for the development of GIS work to be as efficient as possible.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ***** Section Title End ***** -->
+            <div class="row">
+                <div class="offset-lg-1 col-lg-10">
+                    <div class="left-heading">
+                        <h2 class="section-title">3D web-base Point Cloud</h2>
+                    </div>
+                    <div class="left-text">
+                        <p>If you're looking for a 3D GIS development tool, this is a possibility.
+                            The 3D Web-Base Point Cloud is the perfect combination of point cloud data
+                            from field surveys, such as from drone data or 3D laser scanners, then
+                            generated on the server. You can view it in 3D and measure distances, coordinates,
+                            or find coordinates in interactive mapping, increasing an experience that is
+                            superior to general web maps. With Potree, I can create amazing websites.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 align-self-center mobile-bottom-fix-big"
+                    data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+                    <iframe src="https://nvsurvey.com//lku/lku.html" height="600px" width="100%"></iframe>
+                </div>
+            </div>
+            <div class="row">
+                <div class="offset-lg-3 col-lg-6 offset-sm-1 col-sm-10">
+                    <br>
+                    <br>
+                    <div class="hr"></div>
+                </div>
+            </div>
+            <!--OpenLayers start-->
+            <div class="row">
+                <div class="offset-lg-1 col-lg-10 align-self-center mobile-top-fix">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="left-heading">
+                        <h2 class="section-title">OpenLayers</h2>
+                    </div>
+                    <div class="left-text">
+                        <p>OpenLayers is an open-source web-mapping standard,
+                            with a full list of mapping tools. It fully supports geoserver integration.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 align-self-center"
+                    data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+                    <div id="map" class="map"></div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="offset-lg-3 col-lg-6 offset-sm-1 col-sm-10">
+                    <br>
+                    <br>
+                    <div class="hr"></div>
+                </div>
+            </div>
+            <!--Leaflet start-->
+            <div class="row">
+                <div class="offset-lg-1 col-lg-10 align-self-center mobile-bottom-fix">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="left-heading">
+                        <h2 class="section-title">Leaflet</h2>
+                    </div>
+                    <div class="left-text">
+                        <p>The Leaflet web-mapping is small, lightweight, and works perfectly with mobile devices.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 align-self-center"
+                    data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+                    <div id="mapid"></div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <br>
+                    <br>
+                    <div class="hr"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+    <script>
+        //OpenLayers script
+        var map = new ol.Map({
+            target: 'map',
+            layers: [
+                new ol.layer.Tile({
+                    source: new ol.source.OSM()
+                })
+            ],
+            view: new ol.View({
+                center: ol.proj.fromLonLat([100.548156, 13.764096]),
+                zoom: 10
+            })
+        });
+        //Leaflet Script
+        var mymap = L.map('mapid').setView([13.764096, 100.548156], 10);
+        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+            attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+        }).addTo(mymap);
+        var marker = L.marker([13.764096, 100.548156]).addTo(mymap);
+    </script>
+
+
+
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section padding-top-70 padding-bottom-0" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <br>
+                    <br>
+                    <div class="center-heading">
+                        <h2 class="section-title" id="desktopdev">web development</h2>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 align-self-center"
+                    data-scroll-reveal="enter left move 50px over 0.6s after 0.4s">
+                    <img src="assets/images/web_coding.jpg" class="rounded img-fluid d-block mx-auto" alt="App">
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix">
+                    <div class="left-text">
+                        <p>Develop and maintain websites both front-ent using HTML, JavaScript, CSS,
+                            including server side work with PHP and MySQL RDBMS on hosting with Plesk Obsidians.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hr"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section padding-bottom-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <br>
+                    <br>
+                    <div class="center-heading">
+                        <h2 class="section-title" id="desktopdev">Desktop Application Development</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-bottom-fix">
+                    <div class="left-heading">
+                        <br>
+                        <br>
+                        <h2 class="section-title" id="sadd-app">Sesitive Area Data Downloader App (SADD)</h2>
+                    </div>
+                    <div class="left-text">
+                        <p>Client and server-side networking with Java capabilities. It can be used to develop
+                            a Desktop Application for cross-platform transferring data between PCs and mobile devices.
+                            It will work perfectly with the two apps.</p>
+                        <ul class="list-unstyled">
+                            <li>App Features</li>
+                            <li><i class="fa fa-check" style="color: orange;"></i> - Working with <a
+                                    href="#sen-app">Sensitive Area Survey App</a></li>
+                            <li><i class="fa fa-check" style="color: orange;"></i> - Simulate server-side</li>
+                            <li><i class="fa fa-check" style="color: orange;"></i> - Receive data from the client-side
+                            </li>
+                            <li><i class="fa fa-check" style="color: orange;"></i> - Receive data via the
+                                wireless-network</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-bottom-fix-big"
+                    data-scroll-reveal="enter right move 50px over 0.6s after 0.4s">
+                    <img src="assets/images/SADD_UI.jpg" class="rounded img-fluid d-block mx-auto" alt="SADD App">
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+
+    <!-- ***** Home Parallax Start ***** -->
+    <section class="mini" id="programmingSkills">
+        <div class="mini-content">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-lg-3 col-lg-6">
+                        <div class="info">
+                            <h1>Programming Skills</h1>
+                            <p></p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ***** Mini Box Start ***** -->
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                        <a href="#" class="mini-box">
+                            <i><img src="assets/images/programming_logo/java_logo.png" alt=""></i>
+                            <p>Java for Android</p>
+                            <p>Java FX</p>
+                            <p>Java AWT</p>
+                            <p>Java Swing</p>
+
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                        <a href="#" class="mini-box">
+                            <i><img src="assets/images/programming_logo/node_lgo.png" alt=""></i>
+                            <p>ExpressJs</p>
+                            <p>Restful Api</p>
+                            <p>web application</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                        <a href="#" class="mini-box">
+                            <i><img src="assets/images/programming_logo/php_logo.png" alt=""></i>
+                            <p>Back-end Programming</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                        <a href="#" class="mini-box">
+                            <i><img src="assets/images/programming_logo/sql_logo.png" alt=""></i>
+                            <p>Database Programming</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                        <a href="#" class="mini-box">
+                            <i><img src="assets/images/programming_logo/html_logo.png" alt=""></i>
+                            <p>Web Programming</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                        <a href="#" class="mini-box">
+                            <i><img src="assets/images/programming_logo/js_logo.png" alt=""></i>
+                            <p>Web Programming</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                        <a href="#" class="mini-box">
+                            <i><img src="assets/images/programming_logo/css_logo.png" alt=""></i>
+                            <p>Web Programming</p>
+                        </a>
+                    </div>
+                </div>
+                <!-- ***** Mini Box End ***** -->
+            </div>
+        </div>
+    </section>
+    <!-- ***** Home Parallax End ***** -->
+
+    <!-- ***** Blog Start ***** -->
+    <section class="section" id="blog">
+        <div class="container">
+            <!-- ***** Section Title Start ***** -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="center-heading">
+                        <h2 class="section-title">Other experiences</h2>
+                    </div>
+                </div>
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="center-text">
+                        <p></p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <!-- ***** Section Title End ***** -->
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="blog-post-thumb">
+                        <div class="img">
+                            <img src="assets/images/webmaster.png" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h3>
+                                <a href="#">Web Aministrator</a>
+                            </h3>
+                            <div class="text">
+                                <p>Now, as a Web Aministrator at nvsurvey.com, I maintain the whole website system and
+                                    develop database systems.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="blog-post-thumb">
+                        <div class="img">
+                            <img src="assets/images/surveyor.png" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h3>
+                                <a href="#">Surveyor</a>
+                            </h3>
+                            <div class="text">
+                                <p>Surveying is my favorite job. I have experience surveying with GNSS systems with the
+                                    following instruments: Leica GS18T,
+                                    Leica GS15, Leica System1200</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="blog-post-thumb">
+                        <div class="img">
+                            <img src="assets/images/hobby.png" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h3>
+                                <a href="#">Hobby</a>
+                            </h3>
+                            <div class="text">
+                                <p>There are a lot of projects I developed on the Raspberry Pi because it's fun!!!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Blog End ***** -->
+    <!-- ***** Footer Start ***** -->
+    <div id="contact-us"></div>
+    <footer>
+        <div class="container">
+            <!-- ***** Section Title Start ***** -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="center-heading">
+                        <h2 class="section-title">Contact Us</h2>
+                    </div>
+                </div>
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="center-text">
+                        <p class="h5" style="color: black;">if you have any question please contact us via:
+                            <br>
+                            <br>
+                            MR.ADINANT DOLO
+                            <br>
+                            <i class="fa fa-map-marker" style="font-size:24px;color:orange;" aria-hidden="true"></i> 7/3
+                            M.2 Bannang Sareng Sub District,
+                            <br>Muang District, Yala Province, PO.Box 95000, Thailand
+                            <br>
+                            <i class="fa fa-envelope-o" style="font-size:24px;color:orange;" aria-hidden="true"></i>
+                            kungcing@hotmail.com
+                            <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- ***** Section Title End ***** -->
+
+            <div class="row">
+                <!--
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+                -->
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="copyright">Copyright &copy; 2021 ADINANT DOLO </p>
+                    <div class="center-text">
+                        <p>Thanks a lot for this template by: Softy Pinko Company</p>
+                    </div>
+                    <!--<p class="copyright">Copyright &copy; 2020 Softy Pinko Company - Design: TemplateMo</p>-->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script>
+
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>
