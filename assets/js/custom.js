@@ -53,7 +53,7 @@
 	      
 	        var target = this.hash,
 	        menu = target;
-	       	var target = $(this.hash);
+	       	var target = $(window.location.href);
 	        $('html, body').stop().animate({
 	            scrollTop: (target.offset().top) - 130
 	        }, 500, 'swing', function () {
