@@ -226,13 +226,16 @@
                                 <img class="d-block w-100" src="assets/images/mobile/m_ui2.png" alt="Set Data Activity">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="assets/images/mobile/m_ui3.png" alt="Take Photo Activity">
+                                <img class="d-block w-100" src="assets/images/mobile/m_ui3.png"
+                                    alt="Take Photo Activity">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="assets/images/mobile/m_ui4.png" alt="Take Photo Activity">
+                                <img class="d-block w-100" src="assets/images/mobile/m_ui4.png"
+                                    alt="Take Photo Activity">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="assets/images/mobile/m_ui5.png" alt="Take Photo Activity">
+                                <img class="d-block w-100" src="assets/images/mobile/m_ui5.png"
+                                    alt="Take Photo Activity">
                             </div>
                             <img src="assets/images/mobile/m.png" class="d-block w-100" alt="Phone App">
                         </div>
@@ -397,6 +400,7 @@
         </div>
     </section>
     <!-- ***** Features Big Item End ***** -->
+    <script src="./assets/geojson/provinces.js"></script>
     <script>
         //OpenLayers script
         var map = new ol.Map({
@@ -412,11 +416,37 @@
             })
         });
         //Leaflet Script
-        var mymap = L.map('mapid').setView([13.764096, 100.548156], 10);
-        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        var OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        });
+        var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
             attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
-        }).addTo(mymap);
-        var marker = L.marker([13.764096, 100.548156]).addTo(mymap);
+        });
+        var greenStyle = { "color": "#00FF00", "weight": 3, "opacity": 0.30 };
+
+        var geojsonProvincesLayer = L.geoJSON(provinces, {
+                onEachFeature: function (feature, layer) {
+                    layer.bindPopup('<h1>' + feature.properties.pro_th + '</h1><p>province name: ' + feature.properties.pro_en + '</p>');
+                }
+                , style: greenStyle
+            });
+        var mymap = L.map('mapid', {
+            center: [13.764096, 100.548156],
+            zoom: 10,
+            layers: [Esri_WorldImagery, geojsonProvincesLayer]
+        });
+        var baseMaps = {
+            "Open Street Map": OpenStreetMap_Mapnik,
+            "Sattlelite Imaginary": Esri_WorldImagery
+        };
+        var geoJsonLayers = {
+            "Province Boundary": geojsonProvincesLayer
+        };
+
+        L.control.layers(baseMaps, geoJsonLayers).addTo(mymap);
+
+
     </script>
 
 
