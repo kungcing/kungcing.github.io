@@ -401,6 +401,7 @@
     </section>
     <!-- ***** Features Big Item End ***** -->
     <script src="./assets/geojson/provinces.js"></script>
+    <script src="./assets/geojson/districts.js"></script>
     <script>
         //OpenLayers script
         var map = new ol.Map({
@@ -423,14 +424,26 @@
         var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
             attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
         });
-        var greenStyle = { "color": "#00FF00", "weight": 3, "opacity": 0.30 };
-
+        //geojson polygon styles
+        var provinceStyle = { "color": "#00FF00", "weight": 4, "opacity": 0.20 };
+        var districtStyle = { "color": " #ffff00", "weight": 2, "opacity": 0.20 };
         var geojsonProvincesLayer = L.geoJSON(provinces, {
-                onEachFeature: function (feature, layer) {
-                    layer.bindPopup('<h1>' + feature.properties.pro_th + '</h1><p>province name: ' + feature.properties.pro_en + '</p>');
-                }
-                , style: greenStyle
-            });
+            onEachFeature: function (feature, layer) {
+                layer.bindPopup('<h5>' + feature.properties.pro_en + ' Province</h5>');
+            },
+            style: provinceStyle
+        });
+        var geojsonDistrictsLayer = L.geoJSON(districts, {
+            onEachFeature: function (feature, layer) {
+                layer.bindPopup('<h6>' + feature.properties.amp_en + ' District </h6><p>Province: '
+                    + feature.properties.pro_en + '</p><p>District: ' + feature.properties.amp_en + '</p><p>Area km2: ' + feature.properties.area_sqkm + '</p>');
+            },
+            style: districtStyle
+        });
+        var wmsLayer = L.tileLayer.wms('https://data.opendevelopmentmekong.net/geoserver/ODMekong/Thailand%20Forest%20Cover%202020/wms?', {
+            layers: 'Thailand Forest Cover 2020',
+            attribution: '&copy; <a href="https://data.opendevelopmentmekong.net/dataset/">opendevelopmentmekong.net</a>'
+        });
         var mymap = L.map('mapid', {
             center: [13.764096, 100.548156],
             zoom: 10,
@@ -441,15 +454,12 @@
             "Sattlelite Imaginary": Esri_WorldImagery
         };
         var geoJsonLayers = {
-            "Province Boundary": geojsonProvincesLayer
+            "Province Boundary": geojsonProvincesLayer,
+            "District Boundary": geojsonDistrictsLayer,
+            "Thailand Forest 2020": wmsLayer
         };
-
         L.control.layers(baseMaps, geoJsonLayers).addTo(mymap);
-
-
     </script>
-
-
 
     <!-- ***** Features Big Item Start ***** -->
     <section class="section padding-top-70 padding-bottom-0" id="features">
